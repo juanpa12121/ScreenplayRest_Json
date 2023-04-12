@@ -22,7 +22,8 @@ public class ValidateDataExpected implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
     List<DataGetUserBuilder> dataGetUserBuilderList = SerenityRest.lastResponse().jsonPath().getList("", DataGetUserBuilder.class);
         DataGetUserBuilder dataFromApi = dataGetUserBuilderList.get(1);
-        System.out.println(dataFromApi.build().getName());
+        System.out.println(dataFromApi.build().getAddressObject().getStreet());
+        System.out.printf(dataGetUserBuilder.getStreet());
         return true;
     }
 
