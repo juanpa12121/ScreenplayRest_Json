@@ -21,6 +21,9 @@ public class DataGetUserBuilder {
     private String catchPhrase;
     private String bs;
 
+    private Address address;
+    private Company company;
+
     public int getId() {
         return id;
     }
@@ -157,8 +160,6 @@ public class DataGetUserBuilder {
     }
 
     public DataGetUser build() {
-        Address address = new Address(street, suite, city, zipCode, new Geo(lat, lng));
-        Company company = new Company(companyName, catchPhrase, bs);
         return new DataGetUser(id, name, username, email, address, phone, website, company);
     }
 }
