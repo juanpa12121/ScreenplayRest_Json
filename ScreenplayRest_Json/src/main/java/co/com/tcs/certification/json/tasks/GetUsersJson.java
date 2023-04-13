@@ -15,7 +15,7 @@ public class GetUsersJson implements Task {
                         .with(requestSpecification -> requestSpecification
                                 .log().all().relaxedHTTPSValidation())
         );
-        SerenityRest.lastResponse().prettyPrint();
+        //SerenityRest.lastResponse().prettyPrint();
     }
 
     public static GetUsersJson getUserList() {

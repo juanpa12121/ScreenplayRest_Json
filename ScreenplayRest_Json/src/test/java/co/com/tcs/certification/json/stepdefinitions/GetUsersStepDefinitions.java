@@ -1,7 +1,6 @@
 package co.com.tcs.certification.json.stepdefinitions;
-import co.com.tcs.certification.json.models.DataGetUser;
 import co.com.tcs.certification.json.models.DataGetUserBuilder;
-import co.com.tcs.certification.json.questions.ValidateDataExpected;
+import co.com.tcs.certification.json.questions.ValidateExpectedData;
 import co.com.tcs.certification.json.questions.ValidateStatusCode;
 import co.com.tcs.certification.json.tasks.GetUsersJson;
 import cucumber.api.java.Before;
@@ -49,6 +48,6 @@ public class GetUsersStepDefinitions {
     //@Scenario2
     @Then("^The user validates that get response contains data expected$")
     public void theUserValidatesThatGetResponseContainsDataExpected(List<DataGetUserBuilder> dataGetList) {
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateDataExpected.validateDataExpected(dataGetList.get(0))));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateExpectedData.validateDataExpected(dataGetList.get(0))));
     }
 }

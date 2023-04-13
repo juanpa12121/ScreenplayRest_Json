@@ -1,5 +1,8 @@
 package co.com.tcs.certification.json.models;
 
+import lombok.Data;
+
+@Data
 public class Company {
     private String name;
     private String catchPhrase;
@@ -8,30 +11,6 @@ public class Company {
     public Company(String name, String catchPhrase, String bs) {
         this.name = name;
         this.catchPhrase = catchPhrase;
-        this.bs = bs;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCatchPhrase() {
-        return catchPhrase;
-    }
-
-    public void setCatchPhrase(String catchPhrase) {
-        this.catchPhrase = catchPhrase;
-    }
-
-    public String getBs() {
-        return bs;
-    }
-
-    public void setBs(String bs) {
         this.bs = bs;
     }
 }
