@@ -1,8 +1,9 @@
 package co.com.tcs.certification.json.models;
 
-import groovy.transform.builder.Builder;
 
-@Builder
+import lombok.Data;
+
+@Data
 public class DataGetUser {
     private int id;
     private String name;
@@ -21,70 +22,6 @@ public class DataGetUser {
         this.addressObject = addressObject;
         this.phone = phone;
         this.website = website;
-        this.companyObject = companyObject;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Address getAddressObject() {
-        return addressObject;
-    }
-
-    public void setAddressObject(Address addressObject) {
-        this.addressObject = addressObject;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getWebsite() {
-        return website;
-    }
-
-    public void setWebsite(String website) {
-        this.website = website;
-    }
-
-    public Company getCompanyObject() {
-        return companyObject;
-    }
-
-    public void setCompanyObject(Company companyObject) {
         this.companyObject = companyObject;
     }
 }
